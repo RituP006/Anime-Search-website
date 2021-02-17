@@ -40,6 +40,9 @@ function updateDom(data) {
       const animeDate = anime.start_date == null ? "Not available" : anime.start_date;
       const animeRated = anime.rated == null ? "Not available" : anime.rated;
 
+      var cardClass = "card";
+      var title = anime.title;
+
       if (anime.synopsis.length > paraLength) {
         var synopsis = anime.synopsis.slice(0, paraLength);
 
@@ -47,13 +50,27 @@ function updateDom(data) {
         synopsis = anime.synopsis;
       }
 
+      if (anime.title.length <= 19) {
+        cardClass = "card";
+        console.log(`small- ${anime.title.length}`)
+      } else if (anime.title.length > 19 && anime.title.length < 30) {
+        console.log(`bigger shorted- ${anime.title.length}`)
+        title = `${anime.title.slice(0, 19)}..`;
+      } else {
+        // cardClass = "card bigger";
+
+        title = `${anime.title.slice(0, 40)}..`;
+        cardClass = "card big";
+        console.log(`big- ${anime.title.length}`)
+      }
+
       return `
-          <div class="card" >
+          <div class="${cardClass}" >
             <div class="img-container">
               <img   src="${anime.image_url}" >
             </div>
             <div class="content"> 
-                  <h5 class="title">${anime.title}</h5>
+                  <h5 class="title">${title}</h5>
                   <p class="description">${synopsis}..</p>
               <footer class="details"> 
                   
@@ -83,7 +100,8 @@ function updateDom(data) {
     <section>
     <h3>${key.toUpperCase()}</h3>
     <div class="row">${animeHtml}</div>
-    </section>`;
+    </section>
+    `;
 
 
 

@@ -48,9 +48,6 @@ body {
   --shadow: -4px -4px 10px rgba(255, 255, 255, 0.158),
     4px 4px 10px rgba(0, 0, 0, 0.685);
   background: var(--grayback);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .container-1 {
@@ -82,7 +79,7 @@ section {
 
 section h3 {
   padding: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 /* search bar */
@@ -160,10 +157,8 @@ input[type="submit"]:active {
 /* search results  */
 
 .container {
-  flex: 1;
   width: fit-content;
   position: relative;
-  margin: 2rem;
   margin-top: 7rem;
   color: white;
 }
@@ -215,7 +210,6 @@ input[type="submit"]:active {
 
 .content {
   padding: 0 1rem;
-
   height: 5rem;
   position: absolute;
   top: 13rem;
@@ -259,33 +253,11 @@ footer {
 /* footer */
 
 .footer {
-  margin-top: auto;
-  width: 100vw;
-  /* height: 2.5rem; */
-  bottom: 0;
+  position: fixed;
   left: 0;
-  box-shadow: -4px -4px 12px rgba(105, 105, 105, 0.158);
+  bottom: 0;
+  width: 100%;
+  background-color: red;
   color: white;
   text-align: center;
-}
-
-.footer .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: var(--grayback);
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-
-.footer p {
-  font-size: 0.8rem;
 }
