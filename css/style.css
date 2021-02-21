@@ -164,6 +164,7 @@ input[type="submit"]:active {
   width: fit-content;
   position: relative;
   margin: 2rem;
+  margin-left: 6rem;
   margin-top: 7rem;
   color: white;
 }
