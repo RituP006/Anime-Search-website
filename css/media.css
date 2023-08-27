@@ -24,16 +24,15 @@
     justify-content: stretch;
     max-height: 53vh;
     align-items: center;
-    overflow-x: hidden;
     box-shadow: var(--shadow);
   }
-
+/* 
   .container {
     width: auto;
     padding: 0 1rem;
     margin: 0.5rem 2rem;
     margin-top: 7rem;
-  }
+  } */
 
   .card {
     margin-right: 0rem;
@@ -93,9 +92,7 @@
 
 /* for small devices */
 @media (max-width: 375px) {
-  body {
-    overflow-x: hidden;
-  }
+ 
   #search {
     width: 11rem;
     margin: 1rem;
