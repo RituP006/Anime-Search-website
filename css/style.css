@@ -64,10 +64,11 @@ li {
 
 .container-1 {
   height: 20vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin-top: 3rem;
 }
 
 .row {
@@ -90,13 +91,15 @@ section h3 {
 }
 
 /* search bar */
-
+#search_form{
+  position: relative;
+  width: 80%;
+  max-width: 500px
+}
 #search {
   border: none;
   position: relative;
-  width: 25rem;
-  height: 1.8rem;
-  outline: none;
+  width: 100%;
   padding:25px;
   border-radius: 25px;
   height: 40px;
@@ -111,8 +114,8 @@ section h3 {
 
 #search-button{
   position: absolute;
-    top: 71%;
-    right: -1%;
+    top: 26%;
+    right: 5%;
     outline: none;
     border: none;
     padding: 1px;
